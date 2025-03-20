@@ -66,7 +66,7 @@ internal class Program
             Console.WriteLine("Deseja continuar? S/N ");
             string opcaocontinuar = Console.ReadLine()!.ToUpper();
 
-            if (opcaocontinuar != "S") ;
+            if (opcaocontinuar != "S") 
             break;
             
         }
