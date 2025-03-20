@@ -56,25 +56,27 @@ internal class Program
                     jogoEmAndamento = false;
                     continue;
                 }
+
                 Console.WriteLine("-----------------------");
-                Console.WriteLine("RODADA DO COMPUTADOR \n");
+                Console.WriteLine("RODADA DO COMPUTADOR");
                 Console.WriteLine("-----------------------");
                 Console.Write("Pressione ENTER para vizualizar a rodada do computador ...\n");
                 Console.ReadLine();
 
-
                 int resultadoDoComputador = SortearDados();
+                posicaoDoComputador += resultadoDoComputador;
 
 
                 Console.WriteLine($"O valor sorteado foi: [ {resultadoDoComputador} ] \n");
                 Console.ReadLine() ;
+                Console.WriteLine($"O Computador está na posição: {posicaoDoComputador} de {limiteLinhaDeChegada}!\n");
 
 
                 if (posicaoDoComputador == 5 || posicaoDoComputador == 10 || posicaoDoComputador == 15 || posicaoDoComputador == 25)
                 {
 
                     Console.WriteLine(" *** BÔNUS *** Avançe 3 casas !!!\n");
-                    posicaoDoJogador += 3;
+                    posicaoDoComputador += 3;
                     Console.WriteLine($"O computador avaçou para posição: {posicaoDoComputador} !\n");
 
                 }
@@ -86,10 +88,14 @@ internal class Program
                     Console.WriteLine($"O Computador recuou para posição: {posicaoDoComputador} !\n");
                 }
 
+                if (posicaoDoComputador >= limiteLinhaDeChegada)
+                {
+                    Console.WriteLine("Parabéns o Computador alcançou a linha de chegada!\n");
+                    jogoEmAndamento = false;
+                    continue;
+                }
+                Console.Write("Pressione ENTER para continuar ...\n");
 
-                posicaoDoComputador += resultadoDoComputador;
-
-                Console.WriteLine($"O Computador está na posição: {posicaoDoComputador} de {limiteLinhaDeChegada}!\n");
                 Console.ReadLine();
 
             }
