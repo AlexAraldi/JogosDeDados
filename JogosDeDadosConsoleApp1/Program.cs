@@ -23,10 +23,33 @@ internal class Program
                 Console.ReadLine();
 
                 Random geradorDeNumeros = new Random();
+
                 int resultado = geradorDeNumeros.Next(1, 7);
 
+
                 Console.WriteLine($"O valor sorteado foi: [{resultado}] ");
+
                 posicaoDoJogador += resultado;
+
+                Console.WriteLine($"Você está na posição: {posicaoDoJogador} de {limiteLinhaDeChegada}!");
+
+
+                if (posicaoDoJogador == 5 || posicaoDoJogador == 10 || posicaoDoJogador == 15 || posicaoDoJogador == 25) 
+                {
+
+                    Console.WriteLine(" *** BÔNUS *** Avançe 3 casas !!!");
+                    posicaoDoJogador += 3;
+                    Console.WriteLine($"Você está para posição: {posicaoDoJogador} !");
+
+                }
+
+                else if (posicaoDoJogador == 7 || posicaoDoJogador == 13 || posicaoDoJogador == 20) 
+                {
+                    Console.WriteLine(" *** OH NOOO *** Recue 3 casas !!!");
+                    posicaoDoJogador -= 2;
+                    Console.WriteLine($"Você está para posição: {posicaoDoJogador} !");
+
+                }
 
                 if (posicaoDoJogador >= limiteLinhaDeChegada)
                 {
@@ -37,11 +60,6 @@ internal class Program
                     Console.WriteLine($"Você está na posição: {posicaoDoJogador} de {limiteLinhaDeChegada}!");
 
                 Console.ReadLine();
-
-
-
-
-
 
             }
 
