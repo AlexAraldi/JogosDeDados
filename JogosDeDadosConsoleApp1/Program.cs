@@ -83,10 +83,9 @@ internal class Program
                 {
                     Console.WriteLine(" *** OH NOOO *** Recue 2 casas !!!\n");
                     posicaoDoComputador -= 2;
-                    Console.WriteLine($"O computador recuou para posição: {posicaoDoComputador} !\n");
+                    Console.WriteLine($"O Computador recuou para posição: {posicaoDoComputador} !\n");
                 }
 
-                Console.WriteLine($"O valor sorteado foi: [ {resultadoDoComputador} ] \n");
 
                 posicaoDoComputador += resultadoDoComputador;
 
