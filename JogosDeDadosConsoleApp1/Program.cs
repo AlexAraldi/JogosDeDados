@@ -27,27 +27,27 @@ internal class Program
                 int resultado = geradorDeNumeros.Next(1, 7);
 
 
-                Console.WriteLine($"O valor sorteado foi: [{resultado}] ");
+                Console.WriteLine($"O valor sorteado foi: [ {resultado} ] ");
 
                 posicaoDoJogador += resultado;
 
                 Console.WriteLine($"Você está na posição: {posicaoDoJogador} de {limiteLinhaDeChegada}!");
 
 
-                if (posicaoDoJogador == 5 || posicaoDoJogador == 10 || posicaoDoJogador == 15 || posicaoDoJogador == 25) 
+                if (posicaoDoJogador == 5 || posicaoDoJogador == 10 || posicaoDoJogador == 15 || posicaoDoJogador == 25)
                 {
 
                     Console.WriteLine(" *** BÔNUS *** Avançe 3 casas !!!");
                     posicaoDoJogador += 3;
-                    Console.WriteLine($"Você está para posição: {posicaoDoJogador} !");
+                    Console.WriteLine($"Você avaçou para posição: {posicaoDoJogador} !");
 
                 }
 
-                else if (posicaoDoJogador == 7 || posicaoDoJogador == 13 || posicaoDoJogador == 20) 
+                else if (posicaoDoJogador == 7 || posicaoDoJogador == 13 || posicaoDoJogador == 20)
                 {
-                    Console.WriteLine(" *** OH NOOO *** Recue 3 casas !!!");
+                    Console.WriteLine(" *** OH NOOO *** Recue 2 casas !!!");
                     posicaoDoJogador -= 2;
-                    Console.WriteLine($"Você está para posição: {posicaoDoJogador} !");
+                    Console.WriteLine($"Você recuou para posição: {posicaoDoJogador} !");
 
                 }
 
@@ -56,8 +56,8 @@ internal class Program
                     jogoEmAndamento = false;
                     Console.WriteLine("Parabéns você alcançou a linha de chegada!");
                 }
-                else
-                    Console.WriteLine($"Você está na posição: {posicaoDoJogador} de {limiteLinhaDeChegada}!");
+
+               
 
                 Console.ReadLine();
 
@@ -68,6 +68,7 @@ internal class Program
 
             if (opcaocontinuar != "S") ;
             break;
+            
         }
 
 
